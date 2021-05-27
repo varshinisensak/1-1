@@ -1,5 +1,4 @@
 const { Sequelize } = require('sequelize')
-var sequelize = require('sequelize')
 var connection = new Sequelize('rabbit', 'root', 'Varshini1998@', {
     host: 'localhost',
     dialect: 'mysql'
@@ -13,10 +12,6 @@ var Article2 = connection.define('article2', {
     section: sequelize.STRING,
     ref: sequelize.STRING
 })
-
-// const getData = async () => {
-//     const data = await
-// }
 
 Article.hasOne(Article2, {
     foreignKey: "title"
